@@ -1,11 +1,15 @@
 import random
-words = ['Rocks', 'Loan', 'Clock', 'Hangman', 'Mouse', 'Shoe', 'Avenue', 'Apartment', 'Sleeves', 'Genotype']
+words = ['rocks', 'loan', 'clock', 'hangman', 'mouse', 'shoe', 'avenue', 'apartment', 'sleeves', 'genotype']
 print(words)
 letters_guess = 9
 letters_guess_right = []
 guesses_made = []
+input('Choose a letter')
 random_words = random.choice(words)
 playing = True
-while playing and letters_guess > 0:
+while guess > 0:
     guess = input('Choose a letter')
     input()
+else guess < 0:
+    output.end
+letters_used = input('You have lost')
