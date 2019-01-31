@@ -48,4 +48,13 @@ complex_dictionary = {
             'Rockester',
             'Buffalo'
         ]
+    },
+    'WI': {
+        'NAME': 'Wisconsin',
+        'POPULATION': 5800000  # 5,800,000
+    },
+    'NY': {
+        'NAME': 'New York',
+        'POPULATION': 19500000  # 19,500,000
     }
+}
