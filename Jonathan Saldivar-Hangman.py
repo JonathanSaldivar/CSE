@@ -1,28 +1,32 @@
 import random
 import string
-words = ['rocks', 'loan', 'clock', 'hangman', 'mouse', 'shoe', 'avenue', 'apartment', 'sleeves', 'genotype']
-guess = 9
+
 alphabet = list(string.ascii_letters)
-Pun = string.punctuation
+pun = list(string.punctuation)
+guess = 9
+words = ['rocks', 'loan', 'clock', 'hangman', 'mouse', 'shoe', 'avenue', 'apartment', 'sleeves', 'genotype']
 random = random.choice(words)
-list1 = list(random)
+random_word = list(random)
 letters_guessed = []
 
-for i in range(len(words)):
-    if word[i] in alphabet:
-        words.pop(i)
-        words.insert(i, '')
-print(**.join(words))
+win = False
+for i in range(len(random)):
+    if random[i] in alphabet:
+        random_word.pop(i)
+        random_word.insert(i, '_')
+print(''.join(random_word))
 
 while guess > 0 and not win:
     guess1 = input('Type a letter')
     print(guess)
     letters_guessed.append(guess1.lower())
-    for i in range(len(word)):
-        if word[i].lower() in letters_guessed:
-            words.pop(i)
-            words.insert(i, word[i])
-    if guess1.lower() not in words and guess1.upper() not in words:
+    for i in range(len(random)):
+        if random[i].lower() in letters_guessed:
+            random_word.pop(i)
+            random_word.insert(i, random[i])
+    if guess1.lower() not in random_word and guess1.upper() not in random_word:
         guess -= 1
-    print(**.join(words))
-    if ** not in words:
+    print(''.join(random_word))
+if '_' not in random_word:
+    win = True
+    print('You have won')
