@@ -1,16 +1,52 @@
 world_map = {
-    'R19A': {
-        "NAME": "Mr.Wiebe's room",
+    'MANSION': {
+        "NAME": "A Mansion",
         "DESCRIPTION": "This is the room you are in.",
         "PATHS": {
-            'NORTH': "PARKING_LOT"
+            'EAST': "RIGHT_HALLWAY",
+            'WEST': "LEFT_HALLWAY"
         }
     },
-    'PARKING_LOT': {
-        'NAME': "A Parking Lot",
-        'DESCRIPTION': "There are a few cars parked here.",
+    'RIGHT_HALLWAY': {
+        'NAME': "Right Hallway",
+        'DESCRIPTION': "There is nothing but a big carpet here.",
         'PATHS': {
-            'SOUTH': 'R19A'
+            'SOUTH': 'LIVING_ROOM'
+        }
+    },
+    'LEFT_HALLWAY': {
+        'NAME': "Left Hallway",
+        'DESCRIPTION': "There is nothing but a big carpet here.",
+        'PATHS': {
+            'SOUTH': 'KITCHEN'
+        }
+    },
+    'KITCHEN': {
+        'NAME': "A Kitchen",
+        'DESCRIPTION': "There are a lot of spoons, forks, and knifes here",
+        'PATHS': {
+            'SOUTH': 'ROOM'
+        }
+    },
+    'LIVING_ROOM': {
+        'NAME': "A Living Room",
+        'DESCRIPTION': "There is nothing but a tv and a couch here.",
+        'PATHS': {
+            'WEST': 'DOOR'
+        }
+    },
+    'ROOM': {
+        'NAME': "A Room",
+        'DESCRIPTION': "There is a bed and cabinets here",
+        'PATHS': {
+            'SOUTH': ''
+        }
+    },
+    'DOOR': {
+        'NAME': "A Door",
+        'DESCRIPTION': "There is a window",
+        'PATHS': {
+            'SOUTH': ''
         }
     }
 }
