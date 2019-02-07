@@ -18,42 +18,86 @@ world_map = {
         'NAME': "Left Hallway",
         'DESCRIPTION': "There is nothing but a big carpet here.",
         'PATHS': {
-            'SOUTH': 'KITCHEN'
+            'SOUTH': 'KITCHEN',
         }
     },
     'KITCHEN': {
         'NAME': "A Kitchen",
-        'DESCRIPTION': "There are a lot of spoons, forks, and knifes here",
+        'DESCRIPTION': "There are a lot of spoons, forks, and knifes here.",
         'PATHS': {
-            'SOUTH': 'ROOM'
+            'SOUTH': 'ROOM',
+            'NORTH': 'LEFT_HALLWAY'
         }
     },
     'LIVING_ROOM': {
         'NAME': "A Living Room",
         'DESCRIPTION': "There is nothing but a tv and a couch here.",
         'PATHS': {
-            'WEST': 'DOOR'
+            'WEST': 'GAMING_ROOM',
+            'NORTH': 'RIGHT_HALLWAY'
         }
     },
     'ROOM': {
         'NAME': "A Room",
-        'DESCRIPTION': "There is a bed and cabinets here",
+        'DESCRIPTION': "There is a bed and cabinets here.",
         'PATHS': {
-            'SOUTH': ''
+            'EAST': 'DINING_ROOM',
+            'NORTH': 'KITCHEN'
         }
     },
-    'DOOR': {
-        'NAME': "A Door",
-        'DESCRIPTION': "There is a window",
+    'GAMING ROOM': {
+        'NAME': "A Gaming Room",
+        'DESCRIPTION': "There are a lot of games in here.",
         'PATHS': {
-            'SOUTH': ''
+            'SOUTH': 'GARAGE',
+            'EAST': 'LIVING_ROOM'
         }
-    }
+    },
+    'DINING_ROOM': {
+        'NAME': "A Dining Room",
+        'DESCRIPTION': "There is a tv and couch her.",
+        'PATHS': {
+            'SOUTH': 'RESTROOM',
+            'WEST': 'ROOM'
+        }
+    },
+    'GARAGE': {
+        'NAME': "A Garage",
+        'DESCRIPTION': "There is are two cars and gym equipment here.",
+        'PATHS': {
+            'SOUTH': 'OFFICE',
+            'NORTH': 'GAMING_ROOM'
+        }
+    },
+    'OFFICE': {
+        'NAME': "A OFFICE",
+        'DESCRIPTION': "There are a lot of papers in here.",
+        'PATHS': {
+            'EAST': 'CLOSET',
+            'NORTH': 'GARAGE'
+        }
+    },
+    'RESTROOM': {
+        'NAME': "A Restroom",
+        'DESCRIPTION': "There are a lot of restroom equipment in here.",
+        'PATHS': {
+            'WEST': '',
+            'NORTH': 'DINING_ROOM'
+        }
+    },
+    'CLOSET': {
+        'NAME': "A Closet",
+        'DESCRIPTION': "There are a lot of clothes and shoes in here.",
+        'PATHS': {
+            'SOUTH': '',
+            'WEST': 'OFFICE'
+        }
+    },
 }
 
 # Other Variables
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
-current_node = world_map["R19A"]  # This is your current location
+current_node = world_map["MANSION"]  # This is your current location
 playing = True
 
 # Controller
