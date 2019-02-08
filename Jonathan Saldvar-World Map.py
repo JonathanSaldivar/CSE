@@ -45,7 +45,7 @@ world_map = {
             'NORTH': 'KITCHEN'
         }
     },
-    'GAMING ROOM': {
+    'GAMING_ROOM': {
         'NAME': "A Gaming Room",
         'DESCRIPTION': "There are a lot of games in here.",
         'PATHS': {
@@ -57,7 +57,7 @@ world_map = {
         'NAME': "A Dining Room",
         'DESCRIPTION': "There is a tv and couch her.",
         'PATHS': {
-            'SOUTH': 'RESTROOM',
+            'SOUTH': 'MASTER_ROOM',
             'WEST': 'ROOM'
         }
     },
@@ -77,11 +77,11 @@ world_map = {
             'NORTH': 'GARAGE'
         }
     },
-    'RESTROOM': {
-        'NAME': "A Restroom",
-        'DESCRIPTION': "There are a lot of restroom equipment in here.",
+    'MASTER_ROOM': {
+        'NAME': "A Master Room",
+        'DESCRIPTION': "There is furniture, a bed, and tv in here.",
         'PATHS': {
-            'WEST': '',
+            'WEST': 'RESTROOM',
             'NORTH': 'DINING_ROOM'
         }
     },
@@ -89,8 +89,32 @@ world_map = {
         'NAME': "A Closet",
         'DESCRIPTION': "There are a lot of clothes and shoes in here.",
         'PATHS': {
-            'SOUTH': '',
+            'UP': 'RIGHT_ATTIC',
             'WEST': 'OFFICE'
+        }
+    },
+    'RESTROOM': {
+        'NAME': "A Restroom",
+        'DESCRIPTION': "There is a toilet and sink in here.",
+        'PATHS': {
+            'UP': 'LEFT_ATTIC',
+            'EAST': 'MASTER_ROOM'
+        }
+    },
+    'RIGHT_ATTIC': {
+        'NAME': "A Attic",
+        'DESCRIPTION': "There are a lot of boxes up here.",
+        'PATHS': {
+            'WEST':  '',
+            'DOWN': 'CLOSET'
+        }
+    },
+    'LEFT_ATTIC': {
+        'NAME': "Attic Right",
+        'DESCRIPTION': "There are a lot of boxes up here.",
+        'PATHS': {
+            'EAST': '',
+            'DOWN': 'RESTROOM'
         }
     },
 }
