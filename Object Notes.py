@@ -42,7 +42,7 @@ class Laptop(object):
 
     def use(self, time):
         self.battery_left -= time
-        print("You use the laptop for %s minutes" % time)
+        print("You used the laptop for %s minutes" % time)
 
 
 my_computer = Laptop("1920x1080", 10000, "Black")
