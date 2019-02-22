@@ -23,7 +23,7 @@ world_map = {
     },
     'KITCHEN': {
         'NAME': "A Kitchen",
-        'DESCRIPTION': "There are a lot of spoons, forks, and knifes here.",
+        'DESCRIPTION': "There is a lot of kitchen equipment in here.",
         'PATHS': {
             'SOUTH': 'ROOM',
             'NORTH': 'LEFT_HALLWAY'
