@@ -10,6 +10,29 @@ class Room(object):
         self.up = up
         self.down = down
 
+
+class Player(object):
+    def __init__(self, starting_location):
+        self.health = 100
+        self.inventory = []
+        self.current_location = starting_location
+
+    def move(self, new_location):
+        """This method moves a player to a new location
+
+        :param new_location: The room object that we move to
+        """
+        self.current_location = new_location
+
+    def find_room(self, direction):
+        """This method takes a direction, and finds the variable of the room.
+
+        :param direction: A String (all lowercase), with a cardinal direction
+        :return: A room object if it exists, None if it does not
+        """
+        return getattr(self.current_location, direction)
+
+
 # These are the instances of the rooms (Instantiation)
 
 
@@ -24,7 +47,7 @@ room = Room("A Room", "There is a bed and cabinets here.", None, None)
 garage = Room("A Garage", "There is are two cars and gym equipment here.", None, None)
 dining_room = Room("A Dining Room", "There is a tv and couch her.", None, None)
 office = Room("A Office", "There are a lot of papers in here.", None, None)
-master_room = Room("A Master Room", "There is furniture, a bed, and tv in here.")
+master_room = Room("A Master Room", "There is furniture, a bed, and tv in here.", None, None)
 closet = Room("A Closet", "There are a lot of clothes and shoes in here.")
 restroom = Room("A Restroom", "There is a toilet and sink in here.")
 right_attic = Room("A Attic", "There are a lot of boxes up here.")
@@ -54,3 +77,24 @@ closet.up = right_attic
 closet.west = office
 restroom.up = left_attic
 restroom.east = master_room
+
+player = Player(mansion)
+
+directions = ['north', 'south' 'east', 'west', 'up', 'down']
+playing = True
+
+# Controller
+while playing:
+    print(player.current_location.name)
+
+    command = input(">_")
+    if command.lower() in ['q', 'quit', 'exit']:
+        playing = False
+    elif command in directions:
+        try:
+            next_room = player.find_room(command)
+            player.find_room(command)
+        except KeyError:
+            print("I can't go that way")
+    else:
+        print("Command not recognized.")
