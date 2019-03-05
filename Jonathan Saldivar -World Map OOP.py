@@ -48,10 +48,10 @@ garage = Room("A Garage", "There is are two cars and gym equipment here.", None,
 dining_room = Room("A Dining Room", "There is a tv and couch her.", None, None)
 office = Room("A Office", "There are a lot of papers in here.", None, None)
 master_room = Room("A Master Room", "There is furniture, a bed, and tv in here.", None, None)
-closet = Room("A Closet", "There are a lot of clothes and shoes in here.")
-restroom = Room("A Restroom", "There is a toilet and sink in here.")
-right_attic = Room("A Attic", "There are a lot of boxes up here.")
-left_attic = Room("A Attic", "There are a lot of boxes up here.")
+closet = Room("A Closet", "There are a lot of clothes and shoes in here.", None, None)
+restroom = Room("A Restroom", "There is a toilet and sink in here.", None, None)
+right_attic = Room("A Attic", "There are a lot of boxes up here.", None)
+left_attic = Room("A Attic", "There are a lot of boxes up here.", None)
 
 mansion.east = right_hallway
 mansion.west = left_hallway
