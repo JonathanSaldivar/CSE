@@ -23,4 +23,8 @@ class Car(object):
         else:
             print("The car does not drive no more.")
 
-    def
+    def crash(self, time):
+        self.functioning = False
+        print("I drove the car...")
+        print()
+        print("And crashed it to the wall")
