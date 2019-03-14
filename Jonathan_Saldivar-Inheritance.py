@@ -11,12 +11,17 @@ class LaserGun(Item):
 
     def shoot(self):
         self.usage -= 1
-        print("You used a bullet")
+        print("You have %d lasers left" % self.usage)
 
 
 class BlueLaser(LaserGun):
     def __init__(self):
-        super(BlueLaser, self).__init__("BlueLaser")
+        super(BlueLaser, self).__init__("Blue Laser")
+
+
+class RedLaser(LaserGun):
+    def __init__(self):
+        super(RedLaser, self).__init__("Red Laser")
 
 
 class Shotgun(Item):
@@ -27,12 +32,17 @@ class Shotgun(Item):
 
     def shoot(self):
         self.usage -= 1
-        print("Uou used a bullet")
+        print("You have %d shells left" % self.usage)
 
 
 class DoubleBarrel(Shotgun):
     def __init__(self):
-        super(DoubleBarrel, self).__init__("DoubleBarrel")
+        super(DoubleBarrel, self).__init__("Double Barrel")
+
+
+class CombatShotgun(Shotgun):
+    def __init__(self):
+        super(CombatShotgun, self).__init__("Combat Shotgun")
 
 
 class AssaultRifle(Item):
@@ -43,7 +53,7 @@ class AssaultRifle(Item):
 
     def shoot(self):
         self.usage -= 1
-        print("You used a bullet")
+        print("You have %d bullets left" % self.usage)
 
 
 class M16(AssaultRifle):
@@ -51,32 +61,62 @@ class M16(AssaultRifle):
         super(M16, self).__init__("M16")
 
 
+class AK47(AssaultRifle):
+    def __init__(self):
+        super(AK47, self).__init__("AK47")
+
+
 class Sword(Item):
     def __init__(self, name):
         super(Sword, self).__init__(name)
         self.damage = 100
+        self.usage = 20
+
+    def swing(self):
+        self.usage -= 1
+        print("You have %d swings left" % self.usage)
 
 
 class LongSword(Sword):
     def __init__(self):
-        super(LongSword, self).__init__("LongSword")
+        super(LongSword, self).__init__("Long Sword")
 
 
-class Hatchet(Item):
-    def __init__(self, name):
-        super(Hatchet, self).__init__(name)
-        self.damage = 100
-
-
-class BattleAxe(Hatchet):
+class BroadSword(Sword):
     def __init__(self):
-        super(BattleAxe, self).__init__("BattleAxe")
+        super(BroadSword, self).__init__("Broad Sword")
+
+
+class Axe(Item):
+    def __init__(self, name):
+        super(Axe, self).__init__(name)
+        self.damage = 100
+        self.usage = 20
+
+    def swing(self):
+        self.usage -= 1
+        print("You have %d swings left" % self.usage)
+
+
+class BattleAxe(Axe):
+    def __init__(self):
+        super(BattleAxe, self).__init__("Battle Axe")
+
+
+class TacticalAxe(Axe):
+    def __init__(self):
+        super(TacticalAxe, self).__init__("Tactical Axe")
 
 
 class Pipe(Item):
     def __init__(self, name):
         super(Pipe, self).__init__(name)
         self.damage = 75
+        self.usage = 20
+
+    def swing(self):
+        self.usage -= 1
+        print("You have %d swings left" % self.usage)
 
 
 class CopperPipe(Pipe):
@@ -84,13 +124,19 @@ class CopperPipe(Pipe):
         super(CopperPipe, self).__init__("Copper Pipe")
 
 
+class MetalPipe(Pipe):
+    def __init__(self):
+        super(MetalPipe, self).__init__("Metal Pipe")
+
+
 class Potion(Item):
     def __init__(self, name):
         super(Potion, self).__init__(name)
         self.heal = 50
 
-    def heal(self):
-        self.heal += 50
+    def use(self):
+        return self.heal
+    print("You have regained 50 of your health")
 
 
 class ShieldPotion(Potion):
@@ -103,8 +149,9 @@ class BigPotion(Item):
         super(BigPotion, self).__init__(name)
         self.heal = 100
 
-    def heal(self):
-        self.heal += 100
+    def use(self):
+        return self.heal
+    print("You have regained 100 of your health")
 
 
 class BigShieldPotion(BigPotion):
@@ -118,6 +165,8 @@ class ChestArmor(Item):
         self.protect = 50
 
 
+class GoldenChestArmor(ChestArmor):
+    def __init__(self):
 class Helmet(Item):
     def __init__(self, name):
         super(Helmet, self).__init__(name)

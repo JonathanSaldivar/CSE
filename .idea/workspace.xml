@@ -15,7 +15,7 @@
     <SUITE FILE_PATH="coverage/CSE$Jonathan_Saldivar_Hangman.coverage" NAME="Jonathan Saldivar-Hangman Coverage Results" MODIFIED="1548714008217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Semester_2_Notes.coverage" NAME="Semester 2 Notes Coverage Results" MODIFIED="1548280429342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Jonathan_Saldivar_OOP.coverage" NAME="Jonathan Saldivar-OOP Coverage Results" MODIFIED="1551220654725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$Jonathan_Saldivar_Inheritance.coverage" NAME="Jonathan_Saldivar-Inheritance Coverage Results" MODIFIED="1552513190358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Jonathan_Saldivar_Inheritance.coverage" NAME="Jonathan_Saldivar-Inheritance Coverage Results" MODIFIED="1552596717746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Jonathan_Saldivar_World_Map.coverage" NAME="Jonathan Saldivar-World Map Coverage Results" MODIFIED="1549665817590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -48,6 +48,7 @@
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.54" value="3" />
           <entry key="project.open.time.56" value="5" />
           <entry key="project.open.time.58" value="2" />
@@ -60,7 +61,7 @@
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.74" value="2" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -76,13 +77,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="49" />
-          <entry key="py" value="20786" />
+          <entry key="py" value="22033" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="49" />
-          <entry key="Python" value="20786" />
+          <entry key="Python" value="22033" />
         </counts>
       </usages-collector>
     </session>
@@ -104,22 +105,28 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jonathan_Saldivar-Inheritance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="239" lean-forward="true" selection-start-line="239" selection-end-line="239" />
+            <state relative-caret-position="496">
+              <caret line="168" column="23" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
               <folding>
-                <marker date="1552513190248" expanded="true" signature="334:414" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="670:756" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="1019:1087" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="1306:1309" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="1457:1537" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="1676:1759" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="1949:2036" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="2240:2334" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="2663:2752" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="3032:3035" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="3230:3317" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="3522:3523" ph="..." />
-                <marker date="1552513190248" expanded="true" signature="4161:4282" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="353:538" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="535:538" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="813:1018" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="1015:1018" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="1301:1464" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="1835:1918" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="1915:1918" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="2178:2367" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="2282:2367" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="2630:2816" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="2735:2816" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="3055:3142" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="3395:3489" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="3653:3678" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="3878:3967" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="4247:4250" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="4445:4532" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="4737:4738" ph="..." />
+                <marker date="1552599504145" expanded="true" signature="5376:5497" ph="..." />
               </folding>
             </state>
           </provider>
@@ -128,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Inheritance Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
+            <state relative-caret-position="528">
               <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
             </state>
           </provider>
@@ -181,7 +188,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -349,7 +356,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="20" width="1346" height="688" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49512196" weight="0.35552195" />
@@ -452,13 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Inheritance Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jonathan Saldvar-World Map.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
@@ -466,24 +466,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Inheritance Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Jonathan_Saldivar-Inheritance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="239" lean-forward="true" selection-start-line="239" selection-end-line="239" />
+        <state relative-caret-position="496">
+          <caret line="168" column="23" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
           <folding>
-            <marker date="1552513190248" expanded="true" signature="334:414" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="670:756" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="1019:1087" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="1306:1309" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="1457:1537" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="1676:1759" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="1949:2036" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="2240:2334" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="2663:2752" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="3032:3035" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="3230:3317" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="3522:3523" ph="..." />
-            <marker date="1552513190248" expanded="true" signature="4161:4282" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="353:538" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="535:538" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="813:1018" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="1015:1018" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="1301:1464" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="1835:1918" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="1915:1918" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="2178:2367" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="2282:2367" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="2630:2816" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="2735:2816" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="3055:3142" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="3395:3489" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="3653:3678" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="3878:3967" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="4247:4250" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="4445:4532" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="4737:4738" ph="..." />
+            <marker date="1552599504145" expanded="true" signature="5376:5497" ph="..." />
           </folding>
         </state>
       </provider>
