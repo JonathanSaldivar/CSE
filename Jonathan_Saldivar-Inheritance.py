@@ -162,37 +162,64 @@ class BigShieldPotion(BigPotion):
 class ChestArmor(Item):
     def __init__(self, name):
         super(ChestArmor, self).__init__(name)
-        self.protect = 50
+        self.protect = 25
+    print("This item protects 25 of your health")
 
 
 class GoldenChestArmor(ChestArmor):
     def __init__(self):
+        super(GoldenChestArmor, self).__init__("Golden Chest Armor")
+        self.protect = 50
+    print("This item protects 50 of your health")
+
+
+class DiamondChestArmor(ChestArmor):
+    def __init__(self):
+        super(DiamondChestArmor, self).__init__("Diamond Chest Armor")
+        self.protect = 75
+    print("This item protects 75 of your health")
+
+
 class Helmet(Item):
     def __init__(self, name):
         super(Helmet, self).__init__(name)
-        self.protect = 50
-
-    def protects(self):
-        self.protect -= 1
+        self.protect = 25
+    print("This item protects 25 of your health")
 
 
-class ArmoredHelmet(Helmet):
+class GoldenHelmet(Helmet):
     def __init__(self):
-        super(ArmoredHelmet, self).__init__("Armored Helmet")
+        super(GoldenHelmet, self).__init__("Golden Helmet")
+        self.protect = 50
+    print("This item protects 50 of your health")
+
+
+class DiamondHelmet(Helmet):
+    def __init__(self):
+        super(DiamondHelmet, self).__init__("Diamond Helmet")
+        self.protect = 75
+    print("This item protects 75 of your health")
 
 
 class Boots(Item):
     def __init__(self, name):
         super(Boots, self).__init__(name)
-        self.protect = 50
-
-    def protects(self):
-        self.protect -= 1
+        self.protect = 25
+    print("This item protects 25 of your health")
 
 
-class ArmoredBoots(Boots):
+class GoldBoots(Boots):
     def __init__(self):
-        super(ArmoredBoots, self).__init__("Armored Boots")
+        super(GoldBoots, self).__init__("Gold Boots")
+        self.protect = 50
+    print("This item protects 50 of your health")
+
+
+class DiamondBoots(Boots):
+    def __init__(self):
+        super(DiamondBoots, self).__init__("Diamond Boots")
+        self.protect = 75
+    print("This item protects 75 of your health")
 
 
 class Pants(Item):
@@ -204,9 +231,11 @@ class Pants(Item):
         self.protect -= 1
 
 
-class ArmoredPants(Pants):
+class GoldPants(Pants):
     def __init__(self):
-        super(ArmoredPants, self).__init__("Armored Pants")
+        super(GoldPants, self).__init__("Gold Pants")
+        self.protect = 50
+    print("This item protects 50 of your health")
 
 
 class Backpack(Item):
@@ -233,56 +262,3 @@ boots = Item("A pair of boots")
 armor_pants = Item("A pair of armored pants")
 backpack = Item("A backpack")
 
-
-class Item(object):
-    def __init__(self, name):
-        self.name = name
-
-
-class Weapon(Item):
-    def __init__(self, name, damage):
-        super(Weapon, self).__init__(name)
-        self.damage = damage
-
-
-class Armor(Item):
-    def __init__(self, name, armor_amt):
-        super(Armor, self).__init__(name)
-        self.armor_amt = armor_amt
-
-
-class Character(object):
-    def __init__(self, name, health, weapon, armor):
-        self.name = name
-        self.health = health
-        self.weapon = weapon
-        self.armor = armor
-
-    def take_damage(self, damage):
-        if damage < self.armor.armor_amt:
-            print("No damage is done because of some FABULOUS armor!")
-        else:
-            self.health -= damage - self.armor.armor_amt
-            if self.health < 0:
-                self.health = 0
-                print("%s has fallen" % self.name)
-        print("%s has %d health left" % (self.name, self.health))
-
-    def attack(self, target):
-        print("%s attacks %s for %d damage" %
-              (self.name, target.name, self.weapon.damage))
-        target.take_damage(self.weapon.damage)
-# Items
-
-
-Sword = Weapon("Sword", 10)
-canoe = Weapon("Canoe", 84)
-wiebe_armor = Armor("Armor of the Gods", 100000000000000000)
-
-# Characters
-orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
-Wiebe = Character("Wiebe", 1000000000000, canoe, wiebe_armor)
-
-orc.attack(Wiebe)
-Wiebe.attack(orc)
-Wiebe.attack(orc)
