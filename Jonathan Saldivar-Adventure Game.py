@@ -257,6 +257,12 @@ class GoldPants(Pants):
         self.protect = 50
 
 
+class DiamondPants(Pants):
+    def __init__(self):
+        super(DiamondPants, self).__init__("Diamond Pants")
+        self.protect = 75
+
+
 class Backpack(Item):
     def __init__(self, name):
         super(Backpack, self).__init__(name)
@@ -324,20 +330,21 @@ restroom.east = master_room
 
 player = Player(mansion)
 
-directions = ['north', 'south' 'east', 'west', 'up', 'down']
+directions = ['north', 'south', 'east', 'west', 'up', 'down']
 playing = True
 
 # Controller
 while playing:
     print(player.current_location.name)
-
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command in directions:
         try:
             next_room = player.find_room(command)
-            player.move(command)
+            if next_room is None:
+                raise KeyError
+            player.move(next_room)
         except KeyError:
             print("I can't go that way")
     else:
