@@ -14,7 +14,7 @@ class Room(object):
 
 class Player(object):
     def __init__(self, starting_location):
-        self.health = 100
+        self.health = 200
         self.inventory = []
         self.current_location = starting_location
 

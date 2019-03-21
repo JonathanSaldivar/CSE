@@ -261,4 +261,3 @@ helmet = Item("A helmet")
 boots = Item("A pair of boots")
 armor_pants = Item("A pair of armored pants")
 backpack = Item("A backpack")
-
