@@ -272,6 +272,29 @@ class Backpack(Item):
         self.carry -= 1
 
 
+class Character(object):
+    def __init__(self, name, health, weapon, armor):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.armor = armor
+
+    def take_damage(self, damage):
+        if damage < self.armor.armor_amt:
+            print("No damage is done because of some FABULOUS armor!")
+        else:
+            self.health -= damage - self.armor.armor_amt
+            if self.health < 0:
+                self.health = 0
+                print("%s has fallen" % self.name)
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" %
+              (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
+
 laser_gun = Item("A Laser Gun")
 shotgun = Item("A shotgun")
 assault_rifle = Item("An assault rifle")
