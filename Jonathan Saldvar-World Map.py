@@ -11,7 +11,8 @@ world_map = {
         'NAME': "Right Hallway",
         'DESCRIPTION': "There is nothing but a big carpet here.",
         'PATHS': {
-            'SOUTH': 'LIVING_ROOM'
+            'SOUTH': 'LIVING_ROOM',
+            'WEST': 'MANSION'
         }
     },
     'LEFT_HALLWAY': {
@@ -19,6 +20,7 @@ world_map = {
         'DESCRIPTION': "There is nothing but a big carpet here.",
         'PATHS': {
             'SOUTH': 'KITCHEN',
+            'EAST': 'MANSION'
         }
     },
     'KITCHEN': {
@@ -105,7 +107,6 @@ world_map = {
         'NAME': "A Attic",
         'DESCRIPTION': "There are a lot of boxes up here.",
         'PATHS': {
-            'WEST':  '',
             'DOWN': 'CLOSET'
         }
     },
@@ -113,7 +114,6 @@ world_map = {
         'NAME': "Attic Right",
         'DESCRIPTION': "There are a lot of boxes up here.",
         'PATHS': {
-            'EAST': '',
             'DOWN': 'RESTROOM'
         }
     },
