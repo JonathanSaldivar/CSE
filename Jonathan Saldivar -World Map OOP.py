@@ -37,21 +37,34 @@ class Player(object):
 
 
 # Option 1 - Use the Variables, but fix later
-mansion = Room("A Mansion", "This is the room you are in.")
-right_hallway = Room("Right Hallway", "There is nothing but a big carpet here.", None)
-left_hallway = Room("Left Hallway", "There is nothing but a big carpet here.", None)
-kitchen = Room("A Kitchen", "There is a lot of kitchen equipment in here.", None, None)
-living_room = Room("A Living Room", "There is nothing but a tv and a couch here.", None, None)
-gaming_room = Room("A Gaming Room", "There are a lot of games in here.", None, None)
-room = Room("A Room", "There is a bed and cabinets here.", None, None)
-garage = Room("A Garage", "There is are two cars and gym equipment here.", None, None)
-dining_room = Room("A Dining Room", "There is a tv and couch her.", None, None)
-office = Room("A Office", "There are a lot of papers in here.", None, None)
-master_room = Room("A Master Room", "There is furniture, a bed, and tv in here.", None, None)
-closet = Room("A Closet", "There are a lot of clothes and shoes in here.", None, None)
-restroom = Room("A Restroom", "There is a toilet and sink in here.", None, None)
-right_attic = Room("A Attic", "There are a lot of boxes up here.", None)
-left_attic = Room("A Attic", "There are a lot of boxes up here.", None)
+mansion = Room("A Mansion", "This is the room you are in.", None, None, "right_hallway",
+               "left_hallway", None, None)
+right_hallway = Room("Right Hallway", "There is nothing but a big carpet here.", None, "living_room",
+                     None, "mansion", None, None)
+left_hallway = Room("Left Hallway", "There is nothing but a big carpet here.", None,
+                    "kitchen", "mansion", None, None, None)
+kitchen = Room("A Kitchen", "There is a lot of kitchen equipment in here.", "left_hallway",
+               "room", None, None, None, None)
+living_room = Room("A Living Room", "There is nothing but a tv and a couch here.",
+                   "right_hallway", None, None, "gaming_room", None, None)
+gaming_room = Room("A Gaming Room", "There are a lot of games in here.", None,
+                   "garage", "living_room", None, None, None)
+room = Room("A Room", "There is a bed and cabinets here.", "kitchen", None, "dining_room", None,
+            None, None)
+garage = Room("A Garage", "There are two cars and gym equipment here.", "gaming_room", "office",
+              None, None, None, None)
+dining_room = Room("A Dining Room", "There is a tv and couch her.", None, "master_room", None,
+                   "room",  None, None)
+office = Room("A Office", "There are a lot of papers in here.", "garage", "closet", None, None,
+              None, None)
+master_room = Room("A Master Room", "There is furniture, a bed, and tv in here.", "dining_room",
+                   None, None, "restroom", None, None)
+closet = Room("A Closet", "There are a lot of clothes and shoes in here.", None, None, None, "office",
+              "right_attic", None)
+restroom = Room("A Restroom", "There is a toilet and sink in here.", None, None, "master_room", None,
+                "left_attic", None)
+right_attic = Room("A Attic", "Congratulations you have beat the game.", None, None, None, None, None, "closet")
+left_attic = Room("A Attic", "Congratulations you have beat the game.", None, None, None, None, None, "restroom")
 
 mansion.east = right_hallway
 mansion.west = left_hallway
@@ -77,6 +90,8 @@ closet.up = right_attic
 closet.west = office
 restroom.up = left_attic
 restroom.east = master_room
+right_attic.down = closet
+left_attic.down = restroom
 
 player = Player(mansion)
 
