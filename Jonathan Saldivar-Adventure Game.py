@@ -274,10 +274,10 @@ class Backpack(Item):
 
 
 class Character(object):
-    def __init__(self, name, health, weapon, armor):
-        self.name = name
-        self.health = health
-        self.weapon = weapon
+    def __init__(self, enemy, 200, sword, armor):
+        self.name = orc
+        self.health = 200
+        self.weapon = sword
         self.armor = armor
 
     def take_damage(self, damage):
@@ -311,31 +311,31 @@ armor_pants = Item("A pair of armored pants")
 backpack = Item("A backpack")
 
 # Rooms
-mansion = Room("A Mansion", "This is the room you are in.", "backpack", None, None, "right_hallway",
+mansion = Room("A Mansion", "This is the room you are in.", Backpack("Backpack"), None, None, "right_hallway",
                "left_hallway", None, None)
-right_hallway = Room("Right Hallway", "There is nothing but a big carpet here.", "sword", None, "living_room",
+right_hallway = Room("Right Hallway", "There is nothing but a big carpet here.", Sword("Sword"), None, "living_room",
                      None, "mansion", None, None)
-left_hallway = Room("Left Hallway", "There is nothing but a big carpet here.", "assault rifle", None,
+left_hallway = Room("Left Hallway", "There is nothing but a big carpet here.", AssaultRifle("AssaultRifle"), None,
                     "kitchen", "mansion", None, None, None)
-kitchen = Room("A Kitchen", "There is a lot of kitchen equipment in here.", "chest armor", "left_hallway",
+kitchen = Room("A Kitchen", "There is a lot of kitchen equipment in here.", ChestArmor("ChestArmor"), "left_hallway",
                "room", None, None, None, None)
-living_room = Room("A Living Room", "There is nothing but a tv and a couch here.", "boots",
+living_room = Room("A Living Room", "There is nothing but a tv and a couch here.", Boots("boots"),
                    "right_hallway", None, None, "gaming_room", None, None)
-gaming_room = Room("A Gaming Room", "There are a lot of games in here.", "armor pants", None,
+gaming_room = Room("A Gaming Room", "There are a lot of games in here.", Pants("Pants"), None,
                    "garage", "living_room", None, None, None)
-room = Room("A Room", "There is a bed and cabinets here.", "helmet", "kitchen", None, "dining_room", None,
+room = Room("A Room", "There is a bed and cabinets here.", Helmet("Helmet"), "kitchen", None, "dining_room", None,
             None, None)
-garage = Room("A Garage", "There are two cars and gym equipment here.", "shotgun", "gaming_room", "office",
+garage = Room("A Garage", "There are two cars and gym equipment here.", Shotgun("Shotgun"), "gaming_room", "office",
               None, None, None, None)
-dining_room = Room("A Dining Room", "There is a tv and couch her.", "hatchet", None, "master_room", None,
+dining_room = Room("A Dining Room", "There is a tv and couch her.", Axe("Axe"), None, "master_room", None,
                    "room",  None, None)
-office = Room("A Office", "There are a lot of papers in here.", "big potion", "garage", "closet", None, None,
+office = Room("A Office", "There are a lot of papers in here.", BigPotion("BigPotion"), "garage", "closet", None, None,
               None, None)
-master_room = Room("A Master Room", "There is furniture, a bed, and tv in here.", "laser gun", "dining_room",
+master_room = Room("A Master Room", "There is furniture, a bed, and tv in here.", LaserGun("LaserGun"), "dining_room",
                    None, None, "restroom", None, None)
-closet = Room("A Closet", "There are a lot of clothes and shoes in here.", "pipe", None, None, None, "office",
+closet = Room("A Closet", "There are a lot of clothes and shoes in here.", Pipe("Pipe"), None, None, None, "office",
               "right_attic", None)
-restroom = Room("A Restroom", "There is a toilet and sink in here.", "potion", None, None, "master_room", None,
+restroom = Room("A Restroom", "There is a toilet and sink in here.", Potion("Potion"), None, None, "master_room", None,
                 "left_attic", None)
 right_attic = Room("A Attic", "Congratulations you have beat the game.", None, None, None, None, None, "closet")
 left_attic = Room("A Attic", "Congratulations you have beat the game.", None, None, None, None, None, "restroom")
@@ -377,8 +377,14 @@ playing = True
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
-    print(player.current_location.item)
-    print(player.inventory)
+    if player.current_location.item is not None:
+        print(player.current_location.item.name)
+    print()
+
+    if len(player.inventory) > 0:
+        print("You have these items:")
+        for item in player.inventory:
+            print(item.name)
     command = input(">_")
     if command in short_directions:
         pos = short_directions.index(command)
@@ -394,23 +400,34 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way")
-    elif "take" in command:
-        item_name = command[0:]
-        found_item = None
-        for item in player.current_location.item:
-            if item_name == item_name:
-                found_item = player.current_location.item
 
-        if found_item is not None:
-            player.inventory.append(found_item)
-    elif "drop" in command:
-        item_name = command[0:]
-        found_item = None
-        for item in player.current_location.item:
-            if item_name == item_name:
-                found_item = player.current_location.item
-            if player.item = None:
-                player_inventory.remove(player.current_location.item)
+    elif "take" in command.lower():
+        if player.current_location.item is not None:
+            item_name = command[5:]
+            found_item = None
+            if player.current_location.item.name.lower() == item_name.lower():
+                item_found = player.current_location.item
+
+            if found_item is not None:
+                player.inventory.append(found_item)
+                player.current_location.item = None
+        else:
+            print("There are no items in this room")
+
+    elif "drop" in command.lower():
+        if player.current_location.items is None:
+            item_name = command[5:]
+            drop_item = None
+            for item in player.inventory:
+                if item.name.lower() == item_name.lower():
+                    drop_item = item
+
+            if drop_item is not None:
+                player.current_location.item = drop_item
+                player.inventory.remove(drop_item)
+
+        else:
+            print("There's already an item here")
 
     else:
         print("Command not recognized")
