@@ -274,10 +274,10 @@ class Backpack(Item):
 
 
 class Character(object):
-    def __init__(self, enemy, 200, sword, armor):
-        self.name = orc
-        self.health = 200
-        self.weapon = sword
+    def __init__(self, enemy, damage, weapon, armor):
+        self.name = enemy
+        self.health = damage
+        self.weapon = weapon
         self.armor = armor
 
     def take_damage(self, damage):
@@ -382,9 +382,10 @@ while playing:
     print()
 
     if len(player.inventory) > 0:
-        print("You have these items:")
+        print("Your Items:")
         for item in player.inventory:
             print(item.name)
+
     command = input(">_")
     if command in short_directions:
         pos = short_directions.index(command)
@@ -406,16 +407,18 @@ while playing:
             item_name = command[5:]
             found_item = None
             if player.current_location.item.name.lower() == item_name.lower():
-                item_found = player.current_location.item
+                found_item = player.current_location.item
 
             if found_item is not None:
                 player.inventory.append(found_item)
                 player.current_location.item = None
+            else:
+                print("I don't see one")
         else:
             print("There are no items in this room")
 
     elif "drop" in command.lower():
-        if player.current_location.items is None:
+        if player.current_location.item is None:
             item_name = command[5:]
             drop_item = None
             for item in player.inventory:
@@ -428,6 +431,10 @@ while playing:
 
         else:
             print("There's already an item here")
+
+    elif "use" in command.lower():
+        if player.current_location.item is None:
+            item_name = command[5:]
 
     else:
         print("Command not recognized")
