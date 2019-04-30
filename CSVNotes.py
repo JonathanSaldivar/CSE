@@ -23,7 +23,7 @@ def divisible_by_2(num: str):
 
 def is_first_num_odd(num: str):
     first_num = int(num[0])
-    if first_num % 2 ==1:
+    if first_num % 2 == 1:
         return True
     return False
 
@@ -54,7 +54,14 @@ def is_second_num_even(num: str):
 #                 writer.writerow(row)
 #             # print(int(old_number) + 1)
 #             # print(old_number)
-#     print("Done")
+#     print("OK")
+
+
+def reverse_it(string):
+    return string[::-1]
+
+
+print(reverse_it("dlroW olleH"))
 
 
 with open("Book1.csv", 'r') as old_csv:
