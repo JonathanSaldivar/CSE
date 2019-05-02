@@ -40,19 +40,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Jonathan Saldivar-Adventure Game.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="425" column="36" lean-forward="true" selection-start-line="425" selection-start-column="36" selection-end-line="425" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSVNotes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="238">
+              <caret line="20" column="16" selection-start-line="16" selection-end-line="20" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -69,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyNewFile.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="111619" column="16" lean-forward="true" selection-start-line="111619" selection-start-column="16" selection-end-line="111619" selection-end-column="16" />
+            <state relative-caret-position="17">
+              <caret line="111619" column="16" selection-start-line="111619" selection-start-column="16" selection-end-line="111619" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -134,7 +125,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -339,11 +330,12 @@
       <workItem from="1556225835005" duration="2489000" />
       <workItem from="1556311410466" duration="3345000" />
       <workItem from="1556652711093" duration="6762000" />
+      <workItem from="1556825431469" duration="6469000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12596000" />
+    <option name="totallyTimeSpent" value="19065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -402,7 +394,7 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CSE$Jonathan_Saldivar_CSVNotes.coverage" NAME="Jonathan Saldivar-CSVNotes Coverage Results" MODIFIED="1556659308912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Jonathan_Saldivar_CSVNotes.coverage" NAME="Jonathan Saldivar-CSVNotes Coverage Results" MODIFIED="1556832287414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Jonathan_Salduvar_Adventure_Game.coverage" NAME="Jonathan Salduvar-Adventure Game Coverage Results" MODIFIED="1556652938301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
@@ -500,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jonathan Saldivar-Adventure Game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="425" column="36" lean-forward="true" selection-start-line="425" selection-start-column="36" selection-end-line="425" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jonathan Saldivar-Hangman.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -514,17 +499,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Jonathan Saldivar-Adventure Game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="426" lean-forward="true" selection-start-line="426" selection-end-line="426" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyNewFile.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="111619" column="16" lean-forward="true" selection-start-line="111619" selection-start-column="16" selection-end-line="111619" selection-end-column="16" />
+        <state relative-caret-position="17">
+          <caret line="111619" column="16" selection-start-line="111619" selection-start-column="16" selection-end-line="111619" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CSVNotes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="238">
+          <caret line="20" column="16" selection-start-line="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
