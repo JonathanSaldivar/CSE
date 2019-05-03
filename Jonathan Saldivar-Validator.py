@@ -22,6 +22,12 @@ def validate(num: str):
     print(list_nums)
 
 
-if reverse_it:
+def multiply_odd_digits(num: list):
+    for index in range(len(num)):
+        num[index] = int(num[index])
+        if index % 2 == 0:
+            num[index] *= 2
+            if num[index] > 9:
+                num[index] -= 9
 
     print(validate(test_num))
