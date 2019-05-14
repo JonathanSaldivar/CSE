@@ -17,7 +17,6 @@ def validate(num: str):
     # print(reversed_nums)
     list_nums = list(reversed_nums)
     print(list_nums)
-    multiply_odd_digits(all digits)
     for index in range(len(list_nums)):
          list_nums[index] = int(list_nums[index])
     print(list_nums)
