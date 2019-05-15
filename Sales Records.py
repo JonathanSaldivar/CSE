@@ -72,4 +72,9 @@ list_sum = [Profit_For_Fruit, Profit_For_Meat, Profit_For_Clothes, Profit_For_Be
             Profit_For_Cosmetics, Profit_For_Snacks, Profit_For_PersonalCare, Profit_For_Household,
             Profit_For_Vegetables, Profit_For_BabyFood,  Profit_For_Cereal]
 
-list_type = ["fruits", "meat", "clothes", "beverages", "office supplies", "cosmetics", "snacks", "persmoal care", ]
+list_type = ["fruits", "meat", "clothes", "beverages", "office supplies", "cosmetics", "snacks", "personal care",
+             "household", "vegetables", "baby food", "cereal"]
+
+index = list_sum.index(max(list_sum))
+print()
+print("The item with the highest profit is %s" % index)
