@@ -1,13 +1,6 @@
+import csv
 test_num = "2617471728477380"
 print(test_num)
-
-
-def remove_num(string):
-    return string[:15]
-
-
-def reverse_it(string):
-    return string[::-1]
 
 
 def validate(num: str):
