@@ -95,7 +95,7 @@ Vegetables_Total = sum(Profit_For_Vegetables)
 BabyFood_Total = sum(Profit_For_BabyFood)
 Cereal_Total = sum(Profit_For_Cereal)
 # Units Sold
-Profit_Sold_For_Fruit_Average = Profit_For_Fruit / Profit
+Profit_Sold_For_Fruit_Average = Profit_For_Fruit
 # Regions
 Sub_SaharanAfrica_Total = sum(Profit_For_Sub_SaharanAfrica)
 Middle_East_and_North_Africa_Total = sum(Profit_For_Middle_East_and_North_Africa)
