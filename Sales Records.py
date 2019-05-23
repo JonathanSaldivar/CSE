@@ -32,7 +32,7 @@ with open("Sales Records.csv", "r") as csv_file_thing:
     Units_Sold_For_Snacks = []
     Units_Sold_For_PersonalCare = []
     Units_Sold_For_Household = []
-    Units_units_Sold_For_Vegetables = []
+    Units_Sold_For_Vegetables = []
     Units_Sold_For_BabyFood = []
     Units_Sold_For_Cereal = []
 
@@ -44,29 +44,40 @@ with open("Sales Records.csv", "r") as csv_file_thing:
         Units_Sold = row[8]
         if Items == "Fruits":
             Profit_For_Fruit.append(float(Profit))
-            Units_Sold_For_Fruit += int(Units_Sold)
+            Units_Sold_For_Fruit.append(int(Units_Sold))
         if Items == "Meat":
             Profit_For_Meat.append(float(Profit))
+            Units_Sold_For_Meat.append(int(Units_Sold))
         if Items == "Clothes":
             Profit_For_Clothes.append(float(Profit))
+            Units_Sold_For_Clothes.append(int(Units_Sold))
         if Items == "Beverages":
             Profit_For_Beverages.append(float(Profit))
+            Units_Sold_For_Beverages.append(int(Units_Sold))
         if Items == "Office Supplies":
             Profit_For_OfficeSupplies.append(float(Profit))
+            Units_Sold_For_OfficeSupplies.append(int(Units_Sold))
         if Items == "Cosmetics":
             Profit_For_Cosmetics.append(float(Profit))
+            Units_Sold_For_Cosmetics.append(int(Units_Sold))
         if Items == "Snacks":
             Profit_For_Snacks.append(float(Profit))
+            Units_Sold_For_Snacks.append(int(Units_Sold))
         if Items == "Personal Care":
             Profit_For_PersonalCare.append(float(Profit))
+            Units_Sold_For_PersonalCare.append(int(Units_Sold))
         if Items == "Household":
             Profit_For_Household.append(float(Profit))
+            Units_Sold_For_Household.append(int(Units_Sold))
         if Items == "Vegetables":
             Profit_For_Vegetables.append(float(Profit))
+            Units_Sold_For_Vegetables.append(int(Units_Sold))
         if Items == "Baby Food":
             Profit_For_BabyFood.append(float(Profit))
+            Units_Sold_For_BabyFood.append(int(Units_Sold))
         if Items == "Cereal":
             Profit_For_Cereal.append(float(Profit))
+            Units_Sold_For_Cereal.append(int(Units_Sold))
         if Region == "Sub-Saharan Africa":
             Profit_For_Sub_SaharanAfrica.append(float(Profit))
         if Region == "Australia and Oceania":
@@ -94,8 +105,31 @@ Household_Total = sum(Profit_For_Household)
 Vegetables_Total = sum(Profit_For_Vegetables)
 BabyFood_Total = sum(Profit_For_BabyFood)
 Cereal_Total = sum(Profit_For_Cereal)
+total_fruit_units = sum(Units_Sold_For_Fruit)
+total_meat_units = sum(Units_Sold_For_Meat)
+total_clothes_units = sum(Units_Sold_For_Clothes)
+total_beverages_units = sum(Units_Sold_For_Beverages)
+total_OfficeSupplies_units = sum(Units_Sold_For_OfficeSupplies)
+total_cosmetics_units = sum(Units_Sold_For_Cosmetics)
+total_snacks_units = sum(Units_Sold_For_Snacks)
+total_PersonalCare_units = sum(Units_Sold_For_PersonalCare)
+total_household_units = sum(Units_Sold_For_Household)
+total_vegetables_units = sum(Units_Sold_For_Vegetables)
+total_BabyFood_units = sum(Units_Sold_For_BabyFood)
+total_Cereal_units = sum(Units_Sold_For_Cereal)
 # Units Sold
-Profit_Sold_For_Fruit_Average = Profit_For_Fruit
+Fruits_Units_Average = Fruits_Total / total_fruit_units
+Meat_Units_Average = Meat_Total / total_meat_units
+Clothes_Units_Average = Clothes_Total / total_clothes_units
+Beverages_Units_Average = Beverages_Total / total_beverages_units
+OfficeSupplies_Units_Average = OfficeSupplies_Total / total_OfficeSupplies_units
+Cosmetics_Units_Average = Cosmetics_Total / total_cosmetics_units
+Snacks_Units_Average = Snacks_Total / total_snacks_units
+PersonalCare_Units_Average = PersonalCare_Total / total_PersonalCare_units
+Household_Units_Average = Household_Total / total_household_units
+Vegetables_Units_Average = Vegetables_Total / total_vegetables_units
+BabyFood_Units_Average = BabyFood_Total / total_BabyFood_units
+Cereal_Units_Average = Cereal_Total / total_Cereal_units
 # Regions
 Sub_SaharanAfrica_Total = sum(Profit_For_Sub_SaharanAfrica)
 Middle_East_and_North_Africa_Total = sum(Profit_For_Middle_East_and_North_Africa)
@@ -126,6 +160,20 @@ print("Total profit for europe is %f" % Europe_Total)
 print("Total profit for asia is %f" % Asia_Total)
 print("Total profit for central america and the caribbean is %f" % Central_America_and_the_Caribbean_Total)
 print("Total profit for north america is %f" % North_America_Total)
+# units sold
+print()
+print("Units sold for fruits is %f" % Fruits_Units_Average)
+print("Units sold for meat is %f" % Meat_Units_Average)
+print("Units sold for clothes is %f" % Clothes_Units_Average)
+print("Units sold for beverages is %f" % Beverages_Units_Average)
+print("Units sold for office supplies is %f" % OfficeSupplies_Units_Average)
+print("Units sold for cosmetics is %f" % Cosmetics_Units_Average)
+print("Units sold for snacks is %f" % Snacks_Units_Average)
+print("Units sold for personal care is %f" % PersonalCare_Units_Average)
+print("Units sold for house hold is %f" % Household_Units_Average)
+print("Units sold for vegetables is %f" % Vegetables_Units_Average)
+print("Units sold for baby food is %f" % BabyFood_Units_Average)
+print("Units sold for cereal is %f" % Cereal_Units_Average)
 
 item_sum = [Profit_For_Fruit, Profit_For_Meat, Profit_For_Clothes, Profit_For_Beverages, Profit_For_OfficeSupplies,
             Profit_For_Cosmetics, Profit_For_Snacks, Profit_For_PersonalCare, Profit_For_Household,
@@ -148,3 +196,15 @@ region_type = ["sub-saharan africa", "middle east and north africa", "australia 
 region_index = region_sum.index(max(region_sum))
 print()
 print("The region with the highest profit is %s" % region_type[region_index])
+
+units_sold_sum = [Units_Sold_For_Fruit, Units_Sold_For_Meat, Units_Sold_For_Clothes, Units_Sold_For_Beverages,
+                  Units_Sold_For_OfficeSupplies, Units_Sold_For_Cosmetics, Units_Sold_For_Snacks,
+                  Units_Sold_For_PersonalCare, Units_Sold_For_Household, Units_Sold_For_Vegetables,
+                  Units_Sold_For_BabyFood, Units_Sold_For_Cereal]
+
+units_sold_type = ["fruits", "meat", "clothes", "beverages", "office supplies", "cosmetics", "snacks", "personal care",
+                   "household", "vegetables", "baby food", "cereal"]
+
+units_sold_index = units_sold_sum.index(max(units_sold_sum))
+print()
+print("The item with the most units sold is %s" % units_sold_type[units_sold_index])
