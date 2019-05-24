@@ -197,10 +197,10 @@ region_index = region_sum.index(max(region_sum))
 print()
 print("The region with the highest profit is %s" % region_type[region_index])
 
-units_sold_sum = [Units_Sold_For_Fruit, Units_Sold_For_Meat, Units_Sold_For_Clothes, Units_Sold_For_Beverages,
-                  Units_Sold_For_OfficeSupplies, Units_Sold_For_Cosmetics, Units_Sold_For_Snacks,
-                  Units_Sold_For_PersonalCare, Units_Sold_For_Household, Units_Sold_For_Vegetables,
-                  Units_Sold_For_BabyFood, Units_Sold_For_Cereal]
+units_sold_sum = [Fruits_Units_Average, Meat_Units_Average, Clothes_Units_Average, Beverages_Units_Average,
+                  OfficeSupplies_Units_Average, Cosmetics_Units_Average, Snacks_Units_Average,
+                  PersonalCare_Units_Average, Household_Units_Average, Vegetables_Units_Average,
+                  BabyFood_Units_Average, Cereal_Units_Average]
 
 units_sold_type = ["fruits", "meat", "clothes", "beverages", "office supplies", "cosmetics", "snacks", "personal care",
                    "household", "vegetables", "baby food", "cereal"]
